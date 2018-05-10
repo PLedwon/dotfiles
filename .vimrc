@@ -6,6 +6,6 @@
 	set number
 	set relativenumber
 
-	" Compile document using xelatex:
+	" Compile document using pdflatex:
 	autocmd FileType tex inoremap <F5> <Esc>:!pdflatex<space><c-r>%<Enter>a
 	autocmd FileType tex nnoremap <F5> :!pdflatex<space><c-r>%<Enter>
