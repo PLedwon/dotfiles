@@ -27,4 +27,4 @@
 " Compile document using pdflatex:
 	autocmd FileType tex inoremap <F5> <Esc>:!pdflatex<space><c-r>%<Enter>a
 	autocmd FileType tex nnoremap <F5> :!pdflatex<space><c-r>%<Enter>
-autocmd FileType tex inoremap ;bg \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
+autocmd FileType tex inoremap ;bg \begin{<++>}<Enter><++><Enter>\end{<++>}<Enter><Esc>
