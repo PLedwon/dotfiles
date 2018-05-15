@@ -5,11 +5,11 @@
 	set encoding=utf-8
 	set number
 	set relativenumber
-	
+	vmap <C-c> "+y
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 	autocmd VimLeave *.tex !texclear
-	
-	
+
+
 " Enable autocompletion:
 	set wildmode=longest,list,full
 	set wildmenu
