@@ -41,8 +41,12 @@ bindsym Mod4+c exec chromium
 bindsym Mod4+s exec steam
 bindsym Mod4+p exec pavucontrol
 bindsym Mod4+h exec urxvt -e vim ~/Documents/tinaManual
-bindsym Mod4+F1 exec urxvt -e htop
+bindsym Mod4+F1 exec urxvt -e htop 
 
+
+# shutdown/reboot 
+bindsym $mod+Shift+Escape exec sudo shutdown now
+bindsym $mod+Shift+F10  exec systemctl reboot
 
 
 # kill focused window
@@ -174,6 +178,7 @@ client.focused_inactive  $solarizedBlue $solarizedBlue	$solarizedBlue #00ff00
 # finds out, if available)
 bar {
         status_command i3status
+	position bottom
 
     colors {
 	     statusline #00b055 
@@ -185,6 +190,29 @@ bar {
 }
 
 #####################################################
+#Pulseaudio control:
+# Increase sound volume
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
+#bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume 0 +5% 
+# Decrease sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% 
+#bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume 0 -5% 
+# Mute sound
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+#bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute 0 toggle
+
+
+#       Alsamixer control
+#
+#       # Increase sound volume
+#       #bindsym XF86AudioRaiseVolume exec "amixer sset Master '3%+'"
+#       # Decrease sound volume
+#       #bindsym XF86AudioLowerVolume exec "amixer sset Master '3%-'"
+#       # Mute sound
+#       #bindsym XF86AudioMute exec "amixer set Master toggle"
+
+
+
 exec_always setxkbmap -layout de
 exec_always setxkbmap -option caps:escape
 exec_always setxkbmap -option caps:escape
@@ -195,3 +223,5 @@ exec_always --no-startup-id feh --bg-scale ~/Documents/backgrounds/space.jpg
 for_window [class="^.*"] border pixel 2
 exec_always --no-startup-id xset r rate 190 30
 mouse_warping none
+focus_follows_mouse no
+exec pactl load-module module-bluetooth-discover
