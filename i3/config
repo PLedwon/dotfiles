@@ -42,6 +42,7 @@ bindsym Mod4+s exec steam
 bindsym Mod4+p exec pavucontrol
 bindsym Mod4+h exec urxvt -e vim ~/Documents/tinaManual
 bindsym Mod4+F1 exec urxvt -e htop 
+bindsym Mod4+b exec blueman-manager
 
 
 # shutdown/reboot 
@@ -220,8 +221,16 @@ exec_always setxkbmap -option caps:escape
 exec_always setxkbmap -option caps:escape
 exec_always setxkbmap -option caps:escape
 exec_always --no-startup-id feh --bg-scale ~/Documents/backgrounds/space.jpg
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 exec_always --no-startup-id xset r rate 190 30
 mouse_warping none
 focus_follows_mouse no
 exec pactl load-module module-bluetooth-discover
+exec --no-startup-id redshift -l 52:13 -t 4500:2500
+exec --no-startup-id seafile-applet
+
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="Pavucontrol"] resize set 640 480
+for_window [class="Blueman-manager"] resize set 640 480
+
