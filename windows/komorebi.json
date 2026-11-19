@@ -1,0 +1,53 @@
+{
+    "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.30/schema.json",
+    "window_hiding_behaviour": "Cloak",
+    "cross_monitor_move_behaviour": "Insert",
+    "default_workspace_padding": -2,
+    "default_container_padding": 5,
+    "border": true,
+    "border_width": 4,
+    "border_offset": -1,
+    "theme": {
+        "palette": "Base16",
+        "name": "MaterialVivid",
+        "unfocused_border": "Base00",
+        "single_border": "Base0B",
+        "stack_border": "Base0E",
+        "floating_border": "Base08"
+    },
+
+    "float_rule": [
+      {
+    "kind": "Exe",
+    "id": "SC2_x64.exe"
+        }
+    ],
+    
+    "monitors": [
+        {
+            "workspaces": [
+                {
+                    "name": "1",
+                    "layout": "Columns"
+                },
+                {
+                    "name": "2",
+                    "layout": "Columns"
+                },
+                {
+                    "name": "3",
+                    "layout": "Columns"
+                },
+                {
+                    "name": "4",
+                    "layout": "Columns"
+                },
+                {
+                    "name": "5",
+                    "layout": "Columns"
+                }
+            ]
+        }
+    ],
+    "mouse_follows_focus": false
+}

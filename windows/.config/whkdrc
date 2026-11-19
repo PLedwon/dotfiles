@@ -1,0 +1,83 @@
+.shell powershell
+
+# Reload whkd configuration
+alt + shift + c         : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden
+
+# Pause / Resume Komorebi (great for SC2 hotkey safety)
+alt + shift + p         : komorebic toggle-pause
+
+# Exit Komorebi safely
+alt + shift + e         : komorebic stop --whkd
+
+# Retile / Redraw windows
+alt + shift + w         : komorebic retile
+
+# Close / Minimize focused window
+alt + q                 : komorebic close
+alt + i                 : komorebic minimize
+
+# Launch terminal 
+alt + return            : Start-Process cmd
+
+# Focus windows (HJKL + Arrows)
+alt + h                 : komorebic focus left
+alt + j                 : komorebic focus down
+alt + k                 : komorebic focus up
+alt + l                 : komorebic focus right
+alt + left              : komorebic focus left
+alt + down              : komorebic focus down
+alt + up                : komorebic focus up
+alt + right             : komorebic focus right
+
+# Move windows (HJKL + Arrows)
+alt + shift + h         : komorebic move left
+alt + shift + j         : komorebic move down
+alt + shift + k         : komorebic move up
+alt + shift + l         : komorebic move right
+alt + shift + left      : komorebic move left
+alt + shift + down      : komorebic move down
+alt + shift + up        : komorebic move up
+alt + shift + right     : komorebic move right
+
+# Resize focused window (matches your alt + n/p/o/m bindings)
+alt + n                 : komorebic resize-axis horizontal decrease
+alt + p                 : komorebic resize-axis horizontal increase
+alt + o                 : komorebic resize-axis vertical increase
+alt + m                 : komorebic resize-axis vertical decrease
+
+# Window states (Floating, Tiling, Fullscreen/Monocle, Flip direction)
+alt + space             : komorebic toggle-float
+alt + t                 : komorebic promote
+alt + f                 : komorebic toggle-monocle
+alt + v                 : komorebic flip-layout horizontal-and-vertical
+
+# Workspace cycling & recent workspace
+alt + s                 : komorebic cycle-workspace next
+alt + a                 : komorebic cycle-workspace previous
+alt + u                 : komorebic focus-last-workspace
+
+# Move workspace to another monitor
+alt + shift + a         : komorebic send-to-monitor 0
+alt + shift + f         : komorebic send-to-monitor 1
+
+# Switch to workspace 1-9 (Monitor 0)
+alt + 1                 : komorebic focus-workspace 0
+alt + 2                 : komorebic focus-workspace 1
+alt + 3                 : komorebic focus-workspace 2
+alt + 4                 : komorebic focus-workspace 3
+alt + 5                 : komorebic focus-workspace 4
+alt + 6                 : komorebic focus-workspace 5
+alt + 7                 : komorebic focus-workspace 6
+alt + 8                 : komorebic focus-workspace 7
+alt + 9                 : komorebic focus-workspace 8
+
+# Move window to workspace 1-9 and follow it
+alt + shift + 1         : komorebic move-to-workspace 0
+alt + shift + 2         : komorebic move-to-workspace 1
+alt + shift + 3         : komorebic move-to-workspace 2
+alt + shift + 4         : komorebic move-to-workspace 3
+alt + shift + 5         : komorebic move-to-workspace 4
+alt + shift + 6         : komorebic move-to-workspace 5
+alt + shift + 7         : komorebic move-to-workspace 6
+alt + shift + 8         : komorebic move-to-workspace 7
+alt + shift + 9         : komorebic move-to-workspace 8
